@@ -6,7 +6,11 @@ var game = {
 	textures: new Image(),
 	drawPending: false,
 	backgrounds: {
-			'sky': {
+			// 'sky': {
+			// 	image: new Image(),
+			// 	loaded: false
+			// },
+			'mountain': {
 				image: new Image(),
 				loaded: false
 			},
@@ -14,6 +18,7 @@ var game = {
 				image: new Image(),
 				loaded: false
 			}
+			
 	},
 	sounds: {
 		jump: new Audio('sounds/jump.wav')
@@ -31,7 +36,9 @@ var game = {
 		this.canvas.height = this.options.canvasHeight
 		this.context.imageSmoothingEnabled = false
 
-    this.backgrounds['sky'].image.src = "background.png"
+    // this.backgrounds['sky'].image.src = "background.png"
+	//new background 
+	this.backgrounds['mountain'].image.src = "mountain.png"
 		this.backgrounds['trees'].image.src = "trees.png"
 
 		for (var key in this.backgrounds) {

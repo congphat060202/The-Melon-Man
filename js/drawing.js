@@ -40,8 +40,14 @@ game.redraw = function () {
 	game.drawPending = false
 
 	// Draw the background
-	if (game.backgrounds['sky'].loaded) {
-		var pattern = game.context.createPattern(game.backgrounds['sky'].image, 'repeat') // Create a pattern with this image, and set it to "repeat".
+	// if (game.backgrounds['sky'].loaded) {
+	// 	var pattern = game.context.createPattern(game.backgrounds['sky'].image, 'repeat') // Create a pattern with this image, and set it to "repeat".
+	// 	game.context.fillStyle = pattern
+	// } else {
+	// 	game.context.fillStyle = "#78c5ff"
+	// }
+	if (game.backgrounds['mountain'].loaded) {
+		var pattern = game.context.createPattern(game.backgrounds['mountain'].image, 'repeat') // Create a pattern with this image, and set it to "repeat".
 		game.context.fillStyle = pattern
 	} else {
 		game.context.fillStyle = "#78c5ff"
